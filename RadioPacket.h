@@ -18,12 +18,14 @@ typedef struct __attribute__((__packed__)) radio_packet {
 //	float	gnss_hdop;
 	float	gnss_lon;
 	float	gnss_lat;
-	float	gnss_alt;
+	int32_t	gnss_alt;
 	uint8_t av_state;
 }radio_packet_t;
 
 
-uint32_t lol = sizeof(radio_packet_t);
+const uint32_t radio_packet_size = sizeof(radio_packet_t);
+
+const uint8_t radio_packet_opcode = 0x00;
 
 
 
