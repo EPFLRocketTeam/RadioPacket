@@ -10,7 +10,7 @@ typedef struct __attribute__((__packed__)) radio_packet {
 	uint32_t timestamp;
 	int32_t acc_z;
 	int32_t baro_press;
-	int32_t baro_temp;
+	int16_t baro_temp;
 	int32_t kalman_z;
 	int32_t kalman_v;
 //	int32_t kalman_a;
