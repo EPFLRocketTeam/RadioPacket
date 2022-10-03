@@ -6,7 +6,7 @@
 
 //aim for 100 bytes
 typedef struct __attribute__((__packed__)) radio_packet {
-	uint8_t preamble;
+	char prefix = '*';
 	uint32_t timestamp;
 	int32_t acc_z;
 	int32_t baro_press;
@@ -20,6 +20,8 @@ typedef struct __attribute__((__packed__)) radio_packet {
 	float	gnss_lat;
 	int32_t	gnss_alt;
 	uint8_t av_state;
+    	uint32_t packet_nbr;
+    	char suffix = '/';
 }radio_packet_t;
 
 
